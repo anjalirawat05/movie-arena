@@ -1,0 +1,146 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  header {
+    background-color: #1c1c1c;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  header ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  header ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .hero {
+    background: url('poster.jpg') no-repeat center center/cover;
+    padding: 6em 1em;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  #search-box {
+    padding: 0.5em;
+    width: 50%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+  }
+  #search-button {
+    display: block;
+    width: 10%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+  
+  #trending {
+    padding: 2em;
+    text-align: center;
+  }
+  
+  #trending h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .movie-item{
+    width:300px;
+    margin:1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,1);
+    position: relative;
+    overflow: hidden;
+
+  }
+  .movie-item img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  .movie-info{
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+  }
+  .movie-info h3{
+    margin-top: 0;
+  }
+  
+ .Year{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #fff;
+  color:black;
+  padding: 1rem;
+  max-height: 100%;
+  transform:translateY(101%);
+  transition:transform 0.3s ease-in;
+ }
+ .movie-item:hover .Year{
+  transform:translateY(0);
+ }
+  footer {
+    background-color: #1c1c1c;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  footer a {
+    color: #e50914;
+    text-decoration: none;
+  }
+  
