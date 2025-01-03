@@ -37,6 +37,10 @@
   header ul li a {
     color: #fff;
     text-decoration: none;
+    transition:0.5s;
+  }
+  header ul li a:hover{
+    color:#ff0612;
   }
   
   .hero {
