@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 
 app.use(cors());
@@ -12,6 +12,10 @@ app.use(express.json());
 
 
 const OMDB_API_KEY = process.env.OMDB_API_KEY; 
+app.get('/',(req,res)=>{
+    res.send("welcome");
+
+})
 
 app.get('/api/movies', async (req, res) => {
     const { query } = req.query; 
