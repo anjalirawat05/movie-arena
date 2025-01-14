@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json()); 
 
+
 const OMDB_API_KEY = process.env.OMDB_API_KEY; 
 
 app.get('/api/movies', async (req, res) => {
