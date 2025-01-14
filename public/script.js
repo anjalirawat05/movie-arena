@@ -1,7 +1,5 @@
-// Backend API URL
-const API_URL = 'http://localhost:3001/api/movies';
 
-// Fetch movies from the backend
+const API_URL = 'http://localhost:3001/api/movies';
 
 async function searchMovies() {
     const query = document.getElementById('search-box').value.trim();
@@ -27,10 +25,9 @@ async function searchMovies() {
     }
 }
 
-// Display movies in the DOM
-function displayMovies(movies) {                                // here movies contain json format of fetched movies
+function displayMovies(movies) {                                
     const moviesList = document.getElementById('movies-list');
-    moviesList.innerHTML = ''; // Clear previous results
+    moviesList.innerHTML = ''; 
 
     movies.forEach(movie => {
         const movieItem = document.createElement('div');
@@ -53,16 +50,15 @@ function displayMovies(movies) {                                // here movies c
     });
 }
 
-// Display error message
 function displayError(message) {
     const moviesList = document.getElementById('movies-list');
     moviesList.innerHTML = `<p style="color: red;">${message}</p>`;
 }
 
 
-// Enable search on pressing Enter
+
 document.getElementById('search-box').addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') { // Check if the key pressed is Enter
-        searchMovies(); // Trigger the search
+    if (event.key === 'Enter') { 
+        searchMovies(); 
     }
 });
