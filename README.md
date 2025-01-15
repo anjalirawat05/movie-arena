@@ -1,0 +1,1 @@
+**Movie Arena** is a dynamic movie website where users can explore movies & view details. The application features a **Node.js** backend for handling API requests and **Firebase Authentication** for secure user login and signup.
