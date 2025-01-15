@@ -3,148 +3,111 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+
+}
+
+body {
+    
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #fff;
-  }
-  
-  header {
-    background-color: #1c1c1c;
-    padding: 1rem 2rem;
-    text-align: center;
-  }
-  
-  header nav {
+    line-height: 1.6;
+
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("poster.jpg");
+ 
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-  }
-  
-  header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  header ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-  }
-  
-  header ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition:0.5s;
-  }
-  header ul li a:hover{
-    color:#ff0612;
-  }
-  
-  .hero {
-    background: url('poster.jpg') no-repeat center center/cover;
-    padding: 6em 1em;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  #search-box {
-    padding: 0.5em;
-    width: 50%;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-  }
-  #search-button {
+    min-height: 100vh;
+}
+
+.auth-container {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter:blur(10px);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-wrapper {
+    display: none;
+}
+
+.form-wrapper:not(.hidden) {
     display: block;
-    width: 10%;
-    padding: 10px;
-    background-color: #007BFF;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #fffefe;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+   
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color:#fff;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    outline:none;
+    color:#fff;
+    background:transparent;
+    border-bottom:3px solid #fff;
+}
+
+.form-button {
+    display: block;
+    width: 100%;
+    background-color: #d20000;
     color: white;
+    padding: 0.8rem;
+    font-size: 1rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  
+    transition: background-color 0.3s ease;
 }
 
-#search-button:hover {
-    background-color: #0056b3;
+.form-button:hover {
+    background-color:  #b40707;
 }
-  
-  #trending {
-    padding: 2em;
-    text-align: center;
-  }
-  
-  #trending h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-  }
-  .movie-item{
-    width:300px;
-    margin:1rem;
-    border-radius: 3px;
-    box-shadow: 0.2px 4px 5px rgba(0,0,0,1);
-    position: relative;
-    overflow: hidden;
 
-  }
-  .movie-item img {
-    max-width: 100%;
-    border-radius: 5px;
-  }
-  .movie-info{
-    color:white;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem 1rem;
-    letter-spacing: 0.5px;
-  }
-  .movie-info h3{
-    margin-top: 0;
-  }
-  
- .Year{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  background-color: #fff;
-  color:black;
-  padding: 1rem;
-  max-height: 100%;
-  transform:translateY(101%);
-  transition:transform 0.3s ease-in;
- }
- .movie-item:hover .Year{
-  transform:translateY(0);
- }
-  footer {
-    background-color: #1c1c1c;
-    padding: 1em;
+.form-footer {
     text-align: center;
-  }
-  
-  footer a {
-    color: #e50914;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.form-footer a {
+    color:  #f50a0a;
     text-decoration: none;
-  }
-  
+    font-weight:bold;
+    transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+    color:  #b50303;
+}
+
+.hidden {
+    display: none;
+}

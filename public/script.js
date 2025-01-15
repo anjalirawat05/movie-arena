@@ -1,5 +1,5 @@
 
-const API_URL = 'http://localhost:3001/api/movies';
+const API_URL = 'https://movie-arena-1.onrender.com/api/movies';
 
 async function searchMovies() {
     const query = document.getElementById('search-box').value.trim();

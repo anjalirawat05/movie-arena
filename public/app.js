@@ -35,26 +35,11 @@ signupForm.addEventListener('submit', (e) => {
     
       const user = userCredential.user;
       alert('User created successfully!');
-    //  return user.getIdToken();
- // })
- /* .then((idToken) => {
-   
-      fetch('http://localhost:3001/protected', {
-          method: 'GET',
-          headers: {
-              'Authorization': `Bearer ${idToken}`,
-          }, 
-       
-      }) */
 
-    /*  .then(response => response.json())
-      .then(data => {
-          console.log(data);*/
 
-          window.location.href = "index.html"; 
+          window.location.href = "home.html"; 
       })
-      //.catch(error => console.error('Error:', error));
-  //})
+     
   .catch((error) => {
     const errorcode=error.code;
     const errorMessage=error.message;
@@ -72,26 +57,8 @@ loginForm.addEventListener('submit', (e) => {
     .then((userCredential) => {
       const user = userCredential.user;
       alert('User logged in successfully!');
-      /*return user.getIdToken();
-  })
-  .then((idToken) => {
-    console.log("this is the token",idToken);
-      fetch('http://localhost:3001/protected', {
-          method: 'GET',
-          headers: {
-              'Authorization': `Bearer ${idToken}`,
-          },
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch data from backend');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Data from backend:', data);
-      })*/
-        window.location.href = "index.html";
+   
+        window.location.href = "home.html";
   })
   .catch((error) => {
       alert('Error: ' + error.message);
